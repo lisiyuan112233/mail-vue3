@@ -1019,6 +1019,18 @@
 </template>
 
 <script setup name="Index">
+import { useRouter } from 'vue-router';
+import { ref, onMounted } from 'vue';
+const allRoutes = ref([]);
+onMounted(() => {
+      // 初始获取
+       const router = useRouter();
+       
+      allRoutes.value = router.getRoutes();
+      console.log("初始路由表:", allRoutes.value);
+      
+    
+    });
 const version = ref('3.8.8')
 
 function goTarget(url) {

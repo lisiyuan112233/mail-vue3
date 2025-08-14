@@ -15,6 +15,7 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { scrollTo } from '@/utils/scroll-to'
 
 const props = defineProps({
@@ -33,7 +34,7 @@ const props = defineProps({
   pageSizes: {
     type: Array,
     default() {
-      return [10, 20, 30, 50]
+      return [5, 10, 20, 30]
     }
   },
   // 移动端页码按钮的数量端默认值5

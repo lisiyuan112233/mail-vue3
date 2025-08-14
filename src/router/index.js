@@ -26,6 +26,7 @@ import Layout from '@/layout'
 
 // 公共路由
 export const constantRoutes = [
+
   {
     path: '/redirect',
     component: Layout,
@@ -81,6 +82,19 @@ export const constantRoutes = [
         component: () => import('@/views/system/user/profile/index'),
         name: 'Profile',
         meta: { title: '个人中心', icon: 'user' }
+      }
+    ]
+  },
+  {
+    path: '/product',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'edit',
+        component: () => import('@/views/product/edit/index'),
+        name: 'ProductEdit',
+        meta: { title: '产品编辑' }
       }
     ]
   }
