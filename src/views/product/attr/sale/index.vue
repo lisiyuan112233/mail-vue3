@@ -1,13 +1,12 @@
 <template>
-    <div>
-        ddd
-    </div>
+  <div>
+    <base-attr :attrtype="0"></base-attr>
+  </div>
 </template>
 
 <script setup>
-
+import BaseAttr from './baseattr'
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
 </style>
